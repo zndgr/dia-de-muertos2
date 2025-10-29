@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día de Muertos y La Catrina</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+    body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #1a0033 0%, #4a0e4e 50%, #ff6b35 100%);
+        color: #fff;
+        line-height: 1.8;
+    }
+
+    header {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 3rem 2rem;
+        text-align: center;
+        border-bottom: 5px solid #ff6b35;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header::before {
+        content: "💀";
+        position: absolute;
+        font-size: 150px;
+        opacity: 0.1;
+        left: 10%;
+        top: -20px;
+        animation: float 6s ease-in-out infinite;
+    }
+
+    header::after {
+        content: "🏵️";
+        position: absolute;
+        font-size: 100px;
+        opacity: 0.1;
+        right: 10%;
+        bottom: -10px;
+        animation: float 4s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        background: linear-gradient(45deg, #ff6b35, #f7931e, #ffd700);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+        color: #ffd700;
+        font-style: italic;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+    }
+
+    .section {
+        background: rgba(255, 255, 255, 0.95);
+        color: #2c1810;
+        padding: 3rem;
+        margin: 2rem 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 50px rgba(255, 107, 53, 0.4);
+    }
+
+    h2 {
+        color: #4a0e4e;
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 3px solid #ff6b35;
+        padding-bottom: 0.5rem;
+    }
+
+    h3 {
+        color: #ff6b35;
+        font-size: 1.8rem;
+        margin: 2rem 0 1rem 0;
+    }
+
+    p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        text-align: justify;
+    }
+
+    .highlight {
+        background: linear-gradient(120deg, #fff4e6 0%, #ffe4cc 100%);
+        padding: 2rem;
+        border-left: 5px solid #ff6b35;
+        border-radius: 10px;
+        margin: 2rem 0;
+        font-style: italic;
+    }
+
+    .altar-elements {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .element-card {
+        background: linear-gradient(135deg, #fff4e6 0%, #ffe4cc 100%);
+        padding: 1.5rem;
+        border-radius: 15px;
+        border: 2px solid #ff6b35;
+        transition: transform 0.3s ease;
+    }
+
+    .element-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+    }
+
+    .element-card h4 {
+        color: #4a0e4e;
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .catrina-section {
+        background: linear-gradient(135deg, #4a0e4e 0%, #6b1e6b 100%);
+        color: #fff;
+    }
+
+    .catrina-section h2 {
+        color: #ffd700;
+        border-bottom-color: #ffd700;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.8);
+        margin-top: 3rem;
+        font-size: 1.1rem;
+    }
+
+    .emoji {
+        font-size: 2rem;
+        display: inline-block;
+        animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+        0%, 100% { transform: rotate(-10deg); }
+        50% { transform: rotate(10deg); }
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .section {
+            padding: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+
+</head>
+<body>
+    <header>
+        <h1> 💀Día de Muertos 💀</h1>
+        <p class="subtitle">🏵️ y la Catrina🏵️ </p>
+    </header>
+<div class="container">
+    <div class="section">
+        <h2>El Día de Muertos</h2>
+        <p>
+            El Día de Muertos es una de las tradiciones más emblemáticas y significativas de México, reconocida por la UNESCO como Patrimonio Cultural Inmaterial de la Humanidad. Esta celebración, que se lleva a cabo los días 1 y 2 de noviembre, representa una fusión única entre las creencias prehispánicas y las tradiciones católicas traídas por los españoles durante la conquista.
+        </p>
+        <p>
+            A diferencia de otras culturas donde la muerte se ve con temor o tristeza, en México se celebra con alegría, color y música. Los mexicanos creen que durante estos días, las almas de los difuntos regresan del más allá para visitar a sus seres queridos, disfrutar de sus comidas favoritas y convivir con los vivos.
+        </p>
+
+        <div class="highlight">
+            <p><strong>💀 "La muerte no nos roba los seres amados. Al contrario, nos los guarda y nos los inmortaliza en el recuerdo"</strong></p>
+        </div>
+
+        <h3>Orígenes Prehispánicos</h3>
+        <p>
+            La tradición del Día de Muertos tiene raíces que se remontan a más de 3,000 años en las culturas mesoamericanas como los aztecas, mayas, purépechas, nahuas y totonacas. Para estas civilizaciones, la muerte no era el final de la existencia, sino una transición hacia otra forma de vida.
+        </p>
+        <p>
+            Los aztecas dedicaban no uno, sino varios meses a la celebración de sus muertos. La diosa Mictecacíhuatl, conocida como la "Dama de la Muerte", era la encargada de cuidar los huesos de los difuntos y presidir las festividades.
+        </p>
+
+        <h3>Elementos del Altar de Muertos</h3>
+        <div class="altar-elements">
+            <div class="element-card">
+                <h4>🕯️ Velas y Veladoras</h4>
+                <p>Iluminan el camino para que las almas encuentren su regreso a casa.</p>
+            </div>
+            <div class="element-card">
+                <h4>🌼 Flor de Cempasúchil</h4>
+                <p>Su color naranja intenso y aroma guían a los espíritus hacia el altar.</p>
+            </div>
+            <div class="element-card">
+                <h4>💀 Calaveras de Azúcar</h4>
+                <p>Representan la muerte de manera alegre y colorida, a menudo con nombres.</p>
+            </div>
+            <div class="element-card">
+                <h4>🍞 Pan de Muerto</h4>
+                <p>Pan dulce tradicional que simboliza el cuerpo de los difuntos.</p>
+            </div>
+            <div class="element-card">
+                <h4>🖼️ Fotografías</h4>
+                <p>Imágenes de los seres queridos fallecidos a quienes se dedica el altar.</p>
+            </div>
+            <div class="element-card">
+                <h4>💧 Agua</h4>
+                <p>Para calmar la sed de las almas después de su largo viaje.</p>
+            </div>
+            <div class="element-card">
+                <h4>🧂 Sal</h4>
+                <p>Purifica el alma y evita que se corrompa en su viaje de ida y vuelta.</p>
+            </div>
+            <div class="element-card">
+                <h4>🍽️ Comida Favorita</h4>
+                <p>Platillos que disfrutaba el difunto en vida, preparados con amor.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section catrina-section">
+        <h2>🎭 La Catrina: Icono de México</h2>
+        
+        <h3>Origen e Historia</h3>
+        <p>
+            La Catrina es uno de los símbolos más reconocibles de México en todo el mundo, pero su origen es relativamente reciente. Esta elegante calavera fue creada en 1912 por el caricaturista e ilustrador mexicano José Guadalupe Posada, originalmente conocida como "La Calavera Garbancera".
+        </p>
+        <p>
+            Posada creó esta imagen como una sátira social durante el Porfiriato, una época en la que muchos mexicanos renegaban de sus raíces indígenas y aspiraban a adoptar costumbres europeas. El término "garbancera" se refería a las personas que, aunque eran de origen humilde (vendían garbanzos), pretendían aparentar un estatus social más alto.
+        </p>
+
+        <h3>La Transformación de Diego Rivera</h3>
+        <p>
+            Fue el muralista Diego Rivera quien inmortalizó y transformó a la Calavera Garbancera en "La Catrina" que conocemos hoy. En 1947, Rivera la incluyó en su mural "Sueño de una tarde dominical en la Alameda Central", vistiéndola con un elegante sombrero de plumas al estilo europeo y un boa de plumas.
+        </p>
+        <p>
+            Rivera la colocó en el centro del mural, acompañada de él mismo cuando era niño y de su esposa Frida Kahlo. Esta representación consolidó a La Catrina como símbolo de la identidad mexicana y de la inevitable igualdad que trae la muerte, sin importar la clase social.
+        </p>
+
+        <h3>Significado y Simbolismo</h3>
+        <p>
+            La Catrina representa varios conceptos importantes en la cultura mexicana:
+        </p>
+        <div class="highlight">
+            <p><strong>La Muerte como Igualadora:</strong> Sin importar riqueza, belleza o poder, todos compartimos el mismo destino final.</p>
+            <p><strong>Crítica Social:</strong> Una burla a quienes niegan sus raíces y pretenden ser lo que no son.</p>
+            <p><strong>Celebración de la Muerte:</strong> La capacidad mexicana de reírse de la muerte y enfrentarla con humor.</p>
+            <p><strong>Identidad Nacional:</strong> Un símbolo de orgullo por las tradiciones mexicanas y su visión única de la muerte.</p>
+        </div>
+
+        <h3>La Catrina en la Actualidad</h3>
+        <p>
+            Hoy en día, La Catrina se ha convertido en un ícono cultural que trasciende fronteras. Durante las celebraciones del Día de Muertos, miles de personas se pintan el rostro como catrinas y catrines, usando maquillaje elaborado que combina elementos de calavera con flores, colores vibrantes y diseños artísticos.
+        </p>
+        <p>
+            La imagen de La Catrina se encuentra en artesanías, pinturas, esculturas, disfraces y todo tipo de expresiones artísticas. Se ha convertido en embajadora de la cultura mexicana y del Día de Muertos alrededor del mundo, representando la manera única en que México honra y celebra a sus muertos.
+        </p>
+    </div>
+
+
+
+
+
+
+</body>
